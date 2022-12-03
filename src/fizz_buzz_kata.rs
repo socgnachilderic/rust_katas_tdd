@@ -3,7 +3,7 @@ pub fn fizzbuzz(number: u8) -> String {
         _ if number % 15 == 0 => "FizzBuzz".to_string(),
         _ if number % 5 == 0 => "Buzz".to_string(),
         _ if number % 3 == 0 => "Fizz".to_string(),
-        _ => number.to_string()
+        _ => number.to_string(),
     }
 }
 
