@@ -20,7 +20,7 @@ impl LightsGrid {
             .flatten()
             .map(|num| {
                 let num: u32 = (*num).into();
-                
+
                 num
             })
             .sum()

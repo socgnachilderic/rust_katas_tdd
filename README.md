@@ -7,3 +7,5 @@
 [3- Wardrobe](https://kata-log.rocks/configure-wardrobe-kata)
 
 [4- Manhattan Distance](https://kata-log.rocks/manhattan-distance-kata)
+
+[5- Ohce](https://kata-log.rocks/ohce-kata)
