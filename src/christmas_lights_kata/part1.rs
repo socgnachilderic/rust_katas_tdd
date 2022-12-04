@@ -1,6 +1,6 @@
-use super::Pos;
+use super::{Pos, GRID_SIZE};
 
-pub struct LightsGrid([[bool; 1_000]; 1_000]);
+pub struct LightsGrid([[bool; GRID_SIZE]; GRID_SIZE]);
 
 impl LightsGrid {
     pub fn turn_on(&mut self, from: Pos, to: Pos) {
@@ -33,7 +33,7 @@ impl LightsGrid {
 
 impl Default for LightsGrid {
     fn default() -> Self {
-        Self([[false; 1_000]; 1_000])
+        Self([[false; GRID_SIZE]; GRID_SIZE])
     }
 }
 

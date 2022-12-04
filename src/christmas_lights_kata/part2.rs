@@ -1,6 +1,6 @@
-use super::Pos;
+use super::{Pos, GRID_SIZE};
 
-pub struct LightsGrid([[u32; 1_000]; 1_000]);
+pub struct LightsGrid([[u8; GRID_SIZE]; GRID_SIZE]);
 
 impl LightsGrid {
     pub fn turn_on(&mut self, from: Pos, to: Pos) {
@@ -15,7 +15,15 @@ impl LightsGrid {
     }
 
     pub fn brightness(&self) -> u32 {
-        self.0.iter().flatten().sum()
+        self.0
+            .iter()
+            .flatten()
+            .map(|num| {
+                let num: u32 = (*num).into();
+                
+                num
+            })
+            .sum()
     }
 
     fn turn_light(&mut self, from: Pos, to: Pos, action: LightAction) {
@@ -41,7 +49,7 @@ impl LightsGrid {
 
 impl Default for LightsGrid {
     fn default() -> Self {
-        Self([[0; 1_000]; 1_000])
+        Self([[0; GRID_SIZE]; GRID_SIZE])
     }
 }
 
